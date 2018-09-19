@@ -34,9 +34,7 @@ if __name__ == '__main__':
 	    # Don't read in any basemap boundary shapefiles.
 	    resolution=None)
 	ax.text(0.99, 0.01,
-	    'github.com/krithin/gullies. '
-	    'Data © OpenStreetMap contributors. '
-	    'Routing by OSRM.',
+	    'Routing to Brisbane.',
 	    verticalalignment = 'bottom', horizontalalignment = 'right',
 	    transform = ax.transAxes, fontsize = 12)
 	print('About to plot %d segments' % len(segments))

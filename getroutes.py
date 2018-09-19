@@ -73,7 +73,8 @@ if __name__ == '__main__':
 		sys.exit('Usage: %s http://my-osrm-server.cc[:port]')
 
 	# Let's start at the merlion downtown
-	start_location = Location(1.2867695, 103.8545142)
+	# BRISBANE -27.468968, 153.023499
+	start_location = Location(-27.468617, 153.026739)
 	osrm_client = OSRMRouteNodesClient(sys.argv[1], start_location)
 
 	# Read the lat,long coords of the destination points from stdin
@@ -91,5 +92,9 @@ if __name__ == '__main__':
 	# route queries in parallel. See:
 	# https://github.com/Project-OSRM/osrm-backend/blob/master/docs/http.md#table-service
 	for destination in destinations:
-		route = osrm_client.route_to_destination(destination)
-		print(repr(route)[1:-1])  # Remove the []-brackets around the list
+		try:
+			route = osrm_client.route_to_destination(destination)
+		except requests.exceptions.HTTPError:
+			continue
+		else:	
+			print(repr(route)[1:-1])  # Remove the []-brackets around the list
