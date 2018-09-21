@@ -1,15 +1,16 @@
-# Roads To Brisbane, Australia
+# All Roads To
 
-shortest way to BRISBANE -27.468617, 153.026739
+to Brisbane, Australia -27.468617, 153.026739
+to Moscow, Russia,  55.7549391, 37.6115628
 
 project forked from https://github.com/krithin/gullies to generate map to my specific needs
 
 
 ### Need to run local OSM server
 to run it in docker https://github.com/Project-OSRM/osrm-backend#using-docker
-get data here: http://download.geofabrik.de/australia-oceania/australia.html
+get data here: http://download.geofabrik.de/
 ```
-docker run -t -i -p 5000:5000 -v $(pwd):/data osrm/osrm-backend osrm-routed --algorithm mld /data/australia-latest.osrm
+docker run -t -i -p 5000:5000 -v $(pwd):/data osrm/osrm-backend osrm-routed --algorithm mld /data/australia-latest.osm.pbf
 ```
 
 check original project readme if have a problems https://github.com/krithin/gullies/blob/master/README.md
@@ -17,20 +18,25 @@ check original project readme if have a problems https://github.com/krithin/gull
 
 ### working on my machine :D
 ```
-python3 getlocations.py australia-latest.osm.pbf 1000 > data/blocations.csv
-cat data/blocations.csv | python3 getroutes.py http://localhost:5000 > data/broutes.txt
-cat data/broutes.txt | python3 collatesegments.py australia-latest.osm.pbf > data/broutescollated.txt
-cat data/broutescollated.txt | python3 simplifysegments.py 2 > data/broutessimplified.txt
-cat data/broutessimplified.txt | python3 plotmatplotlib.py img/RoadsToBrisbane_1000_segment2.png
+python3 getlocations.py australia-latest.osm.pbf 20000 > data/locations.csv
+cat data/locations.csv | python3 getroutes.py http://localhost:5000 > data/routes.txt
+cat data/routes.txt | python3 collatesegments.py australia-latest.osm.pbf > data/routescollated.txt
+cat data/routescollated.txt | python3 simplifysegments.py 2 > data/routessimplified.txt
+cat data/routessimplified.txt | python3 plotmatplotlib.py img/RoadsToBrisbane_20000_segment2_nice2.png
 ```
 
 ## Gallery
-Australia, Brisbane
+Routes from 30000 locations to Brisbane, Australia -27.468617, 153.026739
+![Brisbane 30000 locations](img/RoadsToBrisbane_30000_segment2.png)
+
+Brisbane, Australia -27.468617, 153.026739
+![Brisbane 20000 locations](img/RoadsToBrisbane_20000_segment2_nice_lines.png)
+
+Brisbane, Australia -27.468617, 153.026739
 ![Brisbane 1000 locations](img/RoadsToBrisbane_1000_segment2.png)
 
-Australia, Brisbane
-![Brisbane 10000 locations](img/RoadsToBrisbane_10000_segment2.png)
-
-Australia, Brisbane
+Brisbane, Australia -27.468617, 153.026739
 ![Brisbane 20000 locations](img/RoadsToBrisbane_20000_segment2.png)
 
+Moscow, Russia 55.7549391, 37.6115628
+![Moscow 10000 locations](img/RoadsToMoscow_10000_segment2_nice2.png)
