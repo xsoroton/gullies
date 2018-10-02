@@ -2,8 +2,9 @@
 
 to Brisbane, Australia -27.468617, 153.026739
 to Moscow, Russia,  55.7549391, 37.6115628
+to Shanghai, 31.2231338, 120.9162975
 
-project forked from https://github.com/krithin/gullies to generate map to my specific needs
+project forked from https://github.com/krithin/gullies to generate map to specific needs (to make nice images)
 
 
 ### Need to run local OSM server
@@ -26,17 +27,17 @@ cat data/routessimplified.txt | python3 plotmatplotlib.py img/RoadsToBrisbane_20
 ```
 
 ## Gallery
+Brisbane, Australia -27.468617, 153.026739
+![Brisbane 30000 locations](img/RoadsToBrisbane_30000_segment2_nice_line.png)
+
 Routes from 30000 locations to Brisbane, Australia -27.468617, 153.026739
 ![Brisbane 30000 locations](img/RoadsToBrisbane_30000_segment2.png)
 
 Brisbane, Australia -27.468617, 153.026739
-![Brisbane 20000 locations](img/RoadsToBrisbane_20000_segment2_nice_lines.png)
-
-Brisbane, Australia -27.468617, 153.026739
 ![Brisbane 1000 locations](img/RoadsToBrisbane_1000_segment2.png)
 
-Brisbane, Australia -27.468617, 153.026739
-![Brisbane 20000 locations](img/RoadsToBrisbane_20000_segment2.png)
+Shanghai, China 31.2231338, 120.9162975
+![Shanghai 20000 locations](img/RoadsToShanghai_20000_segment2.png)
 
 Moscow, Russia 55.7549391, 37.6115628
 ![Moscow 10000 locations](img/RoadsToMoscow_10000_segment2_nice2.png)

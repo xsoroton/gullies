@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import common
 
 def linewidthCalc(x):
-	# z = math.log1p(x)
+	# z = math.log10(x)
 	z = math.log1p(x)
 	# make nice looking lines if a lot of routes... else can just used math.log1p(x) or math.log10(x)
 	if z > 0.5:
