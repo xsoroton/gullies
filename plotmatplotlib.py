@@ -10,10 +10,18 @@ import common
 
 def linewidthCalc(x):
 	# z = math.log10(x)
-	z = math.log1p(x)
+	# z = math.log1p(x)
 	# make nice looking lines if a lot of routes... else can just used math.log1p(x) or math.log10(x)
-	if z > 0.5:
-		z = 0.5 + math.log10(z)
+	# if z > 0.5:
+	#	z = 0.5 + math.log10(z)
+
+	# make a nice
+	z = math.log10(math.log1p(x))
+	# because log10 is not good on low numbers
+	if z < 0.05:
+		return 0.17
+	if z < 0.15:
+		return 0.19
 	return z
 
 if __name__ == '__main__':

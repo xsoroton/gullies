@@ -75,12 +75,14 @@ if __name__ == '__main__':
 	# Let's start at the merlion downtown
 	# BRISBANE -27.468968, 153.023499
 	start_location = Location(-27.468617, 153.026739)
+	# Sydney -33.8469759, 150.3715249
+	# start_location = Location(-33.8469759, 150.3715249)
 	# Angarsk 52.5312624, 103.8270722
 	# start_location = Location(52.5312624, 103.8270722)
 	# Moscow 55.7549391,37.6115628
 	# start_location = Location(55.7549391,37.6115628)
 	# Shanghai 31.2231338, 120.9162975
-	#start_location = Location(31.2231338, 120.9162975)
+	# start_location = Location(31.2231338, 120.9162975)
 
 	osrm_client = OSRMRouteNodesClient(sys.argv[1], start_location)
 

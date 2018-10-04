@@ -28,16 +28,19 @@ cat data/routessimplified.txt | python3 plotmatplotlib.py img/RoadsToBrisbane_20
 
 ## Gallery
 Brisbane, Australia -27.468617, 153.026739
-![Brisbane 30000 locations](img/RoadsToBrisbane_30000_segment2_nice_line.png)
+![Brisbane 30000 locations](img/RoadsToBrisbane_30000_segment2_thin_lines.png)
+
+Sydney, Australia -33.8469759, 150.3715249
+![Brisbane 30000 locations](img/RoadsToSydney_30000_segment2_thin_lines.png)
 
 Routes from 30000 locations to Brisbane, Australia -27.468617, 153.026739
 ![Brisbane 30000 locations](img/RoadsToBrisbane_30000_segment2.png)
 
-Brisbane, Australia -27.468617, 153.026739
-![Brisbane 1000 locations](img/RoadsToBrisbane_1000_segment2.png)
+Shanghai, China 31.2231338, 120.9162975
+![Shanghai 20000 locations](img/RoadsToShanghai_20000_segment2_thin_lines.png)
 
 Shanghai, China 31.2231338, 120.9162975
 ![Shanghai 20000 locations](img/RoadsToShanghai_20000_segment2.png)
 
 Moscow, Russia 55.7549391, 37.6115628
-![Moscow 10000 locations](img/RoadsToMoscow_10000_segment2_nice2.png)
+![Moscow 15000 locations](img/RoadsToMoscow_15000_thin_line.png)
